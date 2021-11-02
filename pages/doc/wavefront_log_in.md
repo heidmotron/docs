@@ -9,29 +9,6 @@ Wavefront is a high-performance streaming analytics platform that supports obser
 
 If you already have a VMware Cloud services account, instead of using the Wavefront cluster URL, you can log in to Wavefront from the VMware Cloud services console. If you do not have a VMware Cloud services account, you must create one.
 
-
-## Log In to Wavefront by Using the Wavefront Cluster URL
-
-You can log in to Wavefront by using your Wavefront cluster URL and your VMware Cloud services account.
-
-1. In a Web browser, navigate to your Wavefront cluster URL https://*your-wavefront-cluster*.wavefront.com.
-2. Enter your VMware Cloud services account credentials and log in.
-   
-You successfully logged in to Wavefront by using your VMware Cloud services account.
-
-## Log In to Wavefront from the VMware Cloud Services Portal
-
-If you already have a VMware Cloud services account, you can log in to Wavefront from the VMware Cloud services console.
-
-1. In a Web browser, navigate to [https://console.cloud.vmware.com/](https://console.cloud.vmware.com/).
-2. Enter your credentials, and log in. 
-
-   You must enter the email address and password that you used to create a VMware Cloud services account.
-
-3. On the **Organization** tab of the **Services** page, you can see the list of your available services.
-4. Click the **Tanzu Observability by Wavefront** tile and you will be redirected to your Wavefront cluster.
-
-
 ## (Optional) Create a VMware Cloud Services Account
 
 If you don't have a VMware Cloud services account, you must create one. 
@@ -47,3 +24,24 @@ During the onboarding process, you create a Cloud services account with your VMw
 3. Sign in to VMware Cloud services with your VMware ID.
 
 When you have set up your account, you can invite other people to join your organization. They will receive an email with a link to onboard. For more information see the [VMware Cloud Services Console documentation](https://docs.vmware.com/en/VMware-Cloud-services/services/Using-VMware-Cloud-Services/GUID-20D62AFF-024B-4901-976D-69BFD71BECC8.html).
+
+## Log In to Wavefront from the VMware Cloud Services Portal
+
+If you already have a VMware Cloud services account, you can log in to Wavefront from the VMware Cloud services console.
+
+1. In a Web browser, navigate to [https://console.cloud.vmware.com/](https://console.cloud.vmware.com/).
+2. Enter your credentials, and log in. 
+
+   You must enter the email address and password that you used to create a VMware Cloud services account.
+
+3. On the **Organization** tab of the **Services** page, you can see the list of your available services.
+4. Click the **Tanzu Observability by Wavefront** tile and you will be redirected to your Wavefront cluster.
+
+## Log In to Wavefront by Using the Wavefront Cluster URL
+
+You can log in to Wavefront by using your Wavefront cluster URL and your VMware Cloud services account.
+
+1. In a Web browser, navigate to your Wavefront cluster URL https://*your-wavefront-cluster*.wavefront.com.
+2. Enter your VMware Cloud services account credentials and log in.
+   
+You successfully logged in to Wavefront by using your VMware Cloud services account.
