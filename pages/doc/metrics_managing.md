@@ -7,7 +7,7 @@ permalink: metrics_managing.html
 summary: Understand metrics structure and how to explore metrics in the Metrics Browser
 ---
 
-Wavefront provides observability for several different [metric types](metric_types.html) including time series metrics, histograms, and traces/spans. This page looks at the anatomy of a time series metric and shows you how to explore it in the metrics browser.
+Wavefront provides observability for several different [metric types](metric_types.html) including time series metrics, delta counters, histograms, and traces/spans. This page looks at the anatomy of a time series metric and shows you how to explore it in the metrics browser.
 
 ## Videos
 
@@ -92,9 +92,9 @@ Select **Browse > Metrics** to display the Metrics Browser. Use the Metrics Brow
 To make search easier, you can
 * Drill down and go up the hierarchy.
 * Filter by source.
-* Hide and redisplay metrics or groups of metrics.
+* Hide and redisplay metrics or groups of metrics to unclutter your page.
 
-{% include tip.html content="If you select **Browse > Delta Counters** you can use the same browser to examine [delta counters](delta_counters.html). The process is exactly the same." %}
+{% include tip.html content="If you select **Browse > Delta Counters** you can use the same browser to examine [delta counters](delta_counters.html)." %}
 
 ![metrics browser with pointers to folder & chart icon for selection, source filter, and info button which displays sources and point tags for a metric](images/metrics_browser.png)
 
@@ -108,7 +108,7 @@ To make search easier, you can
 <ol>
 <li>Select <strong>Browse > Metrics</strong></li>
 <li>Select folder icons to drill down to individual metrics.</li>
-<li>With a metric selectd, click <strong>Info</strong> to show sources and point tags for that metric.</li>
+<li>With a metric selected, click <strong>Expand Info</strong> to show sources and point tags for that metric.</li>
 <li>Click the metric name to show a chart with that metric.</li>
 </ol></td>
 <td width="40%"><img src="/images/browse_metrics.png" alt="browse metrics"></td>

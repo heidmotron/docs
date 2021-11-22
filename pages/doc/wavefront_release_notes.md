@@ -13,8 +13,13 @@ This page lists new and updated features for the Wavefront service.
 * For the latest changes and releases of the **Wavefront Integrations**, see the [Integrations Release Notes](integrations_new_changed.html).
 * For  **Observability for Kubernetes**, go to the [release notes for Wavefront Collector for Kubernetes GitHub repository](https://github.com/wavefrontHQ/wavefront-collector-for-kubernetes/releases).
 
+## 2021-47.x Release Notes
 
-## 2021-46.x Release Notes 
+* Minor changes to the [Metrics Browser](metrics_managing.html#metrics-browser)
+  - Unclutter that page with **Load More** option.
+  - Accessibility improvements.
+
+## 2021-46.x Release Notes
 
 * **Integration Improvements**: November integrations are live! See [Integration Release Notes](integrations_new_changed.html#november-2021).
 * **New Doc Pages**:
