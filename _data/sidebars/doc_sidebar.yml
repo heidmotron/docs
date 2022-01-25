@@ -755,6 +755,10 @@ entries:
       - title: Upgrade from Trial Version
         url: /upgrade-and-purchase.html
         output: web
+        
+      - title: Purchase Additional Wavefront Capacity
+        url: /purchase-additional-capacity.html
+        output: web
       
       - title: Wavefront Security
         url: /wavefront_security.html
