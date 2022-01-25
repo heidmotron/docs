@@ -9,6 +9,27 @@ summary: Learn how to query for Wavefront trace data.
 
 After your application sends [trace data](tracing_basics.html#wavefront-trace-data) to Wavefront, you can examine that data in the Traces Browser. By fine-tuning the trace query in the Traces Browser, you find the traces that you're interested in by describing the spans they must contain.
 
+## Create and Use Saved Searches
+
+In many environments, power users create searches on the Traces browser or App Map, and all users can than select those searches from the search list of that page.
+
+{%include tip.html content="Each type of page (Traces browser, App Map, etc) has its own list of saved searches."  %}
+
+* After you've defined a search, click **Search** on the right.
+* Click the **Save** (bookmark) icon to save the current search.
+* Click **Lists** to see available Searches (bookmarks) in alphabetical order:
+  - **My Recent Searches**: Recent searches for the current user.
+  - **My Saved Searches**: Saved searches for the current user.
+  - **All Saved Searches**: Saved searches for all users.
+
+The following annotated screenshot collage illustrates what you can do.
+
+![collage showing annotated search bar and Bookmarks/searches pop-up](images/tracing_saved_searches.png)
+
+### Example
+
+TBD
+
 ## View Tracing Critical Path Data in Charts
 
 The Wavefront Traces Browser shows you all the spans that make up a trace. By examining the critical path, you can find operations that took a long time, decide which operations to optimize, and then examine optimization results. See [Traces Browser](tracing_traces_browser.html) for details.
@@ -242,8 +263,6 @@ You can use any of the [trace filtering functions](traces_function.html#filterin
 limit (100, traces(spans(beachshirts.inventory.*).from(spans(beachshirts.shopping.*))))
 ```
 <iframe width="700" height="400" src="https://www.youtube.com/embed/tBQv2cb3jhk" allowfullscreen></iframe>
-
-
 
 
 ## Search and Filter Traces on the Traces Browser
@@ -480,49 +499,3 @@ Query Builder works well for many use cases, but sometimes Query Editor is your 
 </tr>
 </tbody>
 </table>
-
-
-<!---
-Sue left this commented out table. Not sure we need it.
-<table style="width: 100%">
-<colgroup>
-<col width="15%"/>
-<col width="30%"/>
-<col width="65%"/>
-</colgroup>
-<thead>
-<tr><th>Filter Type</th><th>Returns</th><th>Filter Settings</th></tr>
-</thead>
-<tbody>
-<tr>
-<td markdown="span">**Tags**</td>
-<td markdown="span">Traces that contain at least one span with a selected span tag or from a selected source (host)</td>
-<td markdown="span">Cascading menu of span tags that are used by your application and indexed by Wavefront. Typically includes `cluster`, `shard`, and `component`, among others. Select `source` to match spans from a given source.
-</td>
-</tr>
-<tr>
-<td markdown="span">**RawTags**</td>
-<td markdown="span">Traces that contain at least one span with a specified span tag</td>
-<td markdown="span">Fields for entering the key and value of a custom span tag, for example, `env="prod"`. Use this type for unindexed span tags. </td>
-</tr>
-<tr>
-<td markdown="span">**Duration**</td>
-<td markdown="span">Traces that have a min or max length</td>
-<td markdown="span">Fill in one or both fields to return traces of a minimum or maximum duration (in milliseconds). </td>
-</tr>
-<tr>
-<td markdown="span">**Limit**</td>
-<td markdown="span">A limited number of traces</td>
-<td markdown="span">Select the maximum number of traces to return.  </td>
-</tr>
-<tr>
-<td markdown="span">**Error**</td>
-<td markdown="span">Traces that contain at least one span with an error</td>
-<td markdown="span">True returns traces that contain one or more spans with `error=true`.  </td>
-</tr>
-</tbody>
-</table>
-
-
-
---->
