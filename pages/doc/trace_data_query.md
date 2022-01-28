@@ -9,9 +9,16 @@ summary: Learn how to query for Wavefront trace data.
 
 After your application sends [trace data](tracing_basics.html#wavefront-trace-data) to Wavefront, you can examine that data in the Traces Browser. By fine-tuning the trace query in the Traces Browser, you find the traces that you're interested in by describing the spans they must contain.
 
-## Create and Use Saved Searches
+## Create and Use Saved Searches with Bookmarks
 
-In many environments, power users create searches on the Traces browser or App Map, and all users can than select those searches from the search list of that page.
+Bookmark Lists supports easy access to just the information you need. For example:
+* The owner of an application or service might want to see only that application or service in the  Application map or Traces browser.
+* You might want to search only for data in the Prod environment or otherwise limit what you see.
+
+Wavefront maintains separate lists for Traces browser and App Map.
+* Every user can use **My Recent Searches**.
+* Every user can create up to 10 saved searches (**My Saved Searches**).
+* Power users can create searches, and all users can select those searches from the search list of that page (**Saved Searches**).
 
 {%include tip.html content="Each type of page (Traces browser, App Map, etc) has its own list of saved searches."  %}
 
