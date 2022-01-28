@@ -16,9 +16,9 @@ Bookmark Lists supports easy access to just the information you need. For exampl
 * You might want to search only for data in the Prod environment or otherwise limit what you see.
 
 Wavefront maintains separate lists for Traces browser and App Map.
-* Every user can use **My Recent Searches**.
-* Every user can create up to 10 saved searches (**My Saved Searches**).
-* Power users can create searches, and all users can select those searches from the search list of that page (**Saved Searches**).
+* Each user can use **My Recent Searches**. Last 10 recent searches are shown.
+* Each user can save searches. All users can select those searches from the search list of that page (**Saved Searches**).
+* To access only the searches you saved, you can use **My Saved Searches**.
 
 {%include tip.html content="Each type of page (Traces browser, App Map, etc) has its own list of saved searches."  %}
 
