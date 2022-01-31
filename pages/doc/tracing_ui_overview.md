@@ -9,8 +9,7 @@ summary: Get an overview of the services and applications that send data to Wave
 
 It is important to get an overview of the services and applications that send data to Wavefront, understand the health of each service, and troubleshoot when your applications or services run into issues. You can get an overview and see the overall health of each application using the application map, table view, and grid view.
 
-
-{% include note.html content="This page refers to the Apdex functionality in a few places." %}
+{%include tip.html content="In addition to features discussed here, you can use [Saved Searches and bookmarks](trace_data_query.html#create-and-use-saved-searches-with-bookmarks) in the Application Map. "%}
 
 <a name="app_map"></a>
 
