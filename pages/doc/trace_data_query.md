@@ -16,7 +16,7 @@ Bookmark Lists supports easy access to just the information you need. For exampl
 * You might want to search only for data in the Prod environment or otherwise limit what you see.
 
 Wavefront maintains separate lists for Traces browser and App Map.
-* Each user can use **My Recent Searches**. Last 10 recent searches are shown.
+* Each user can use **My Recent Searches**. The last 10 searches are shown.
 * Each user can save searches. All users can select those searches from the search list of that page (**Saved Searches**).
 * To access only the searches you saved, you can use **My Saved Searches**.
 
@@ -25,7 +25,7 @@ Wavefront maintains separate lists for Traces browser and App Map.
 * After you've defined a search, click **Search** on the right.
 * Click the **Save** (bookmark) icon to save the current search.
 * Click **Lists** to see available Searches (bookmarks) in alphabetical order:
-  - **My Recent Searches**: Recent searches for the current user.
+  - **My Recent Searches**: Last 10 searches for the current user.
   - **My Saved Searches**: Saved searches for the current user.
   - **All Saved Searches**: Saved searches for all users.
 
