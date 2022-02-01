@@ -3,7 +3,7 @@ title: Logging In to Wavefront by Using a VMware Cloud Services Account
 tags: [getting started]
 sidebar: doc_sidebar
 permalink: log_in_to_wavefront.html
-summary: Learn how you can log in to Wavefront by using a VMware Cloud services account.
+summary: Learn how you can log in to Wavefront by using a VMware Cloud services account
 ---
 Wavefront is a high-performance streaming analytics platform that supports observability for metrics, counters, histograms, and traces/spans. You can log in to Wavefront from the Cloud Services Portal. Starting with this 2021-XY release, you can log in to Wavefront by using your VMware Cloud services account.
 
