@@ -8,11 +8,12 @@ summary: Examine data with dashboards and charts
 
 With dashboards and charts, all users can examine data, set dashboard time window, zoom in and out, and perform other customizations.
 
-{% include shared/badge.html content="All users can view and explore charts. You must have [Dashboard permission](permissions_overview.html) to make permanent changes, such as saving a chart to a dashboard." %}
+{% include note.html content="All users can view and explore charts. You must have [Dashboard permission](permissions_overview.html) to make permanent changes, such as saving a chart to a dashboard." %}
 
 ## Video
 
-All users can customize their dashboards to drill down into data. Learn how to find a section, filter using variables or filters, set the time for the dashboard, and share the dashboard with others. You need Dashboards permissions to save your changes.
+All users can customize their dashboards to drill down into data. Learn how to find a section, filter using variables or filters, set the time for the dashboard, and share the dashboard with others. You need Dashboards permissions to save your changes. You can also watch the video <a href="https://bcove.video/2Wux6eP" target="_blank">here <img src="/images/video_camera.png" alt="video camera icon"/></a>.
+
 
 
 <p>
@@ -66,7 +67,7 @@ You can customize what you see, open charts, and more.
 
 ## Set the Time Window
 
-This video highlight how you can select, sync, and reset time windows so you can annalyze and compare your data.
+This <a href="https://bcove.video/3kJ6PGT" target="_blank">video<img src="/images/video_camera.png" alt="video camera icon"/></a> highlights how you can select, sync, and reset time windows so you can annalyze and compare your data.
 
 <p>
 <iframe src="https://bcove.video/3kJ6PGT" width="700" height="400" allowfullscreen="true" alt="customizing dashboards video"></iframe>
@@ -79,7 +80,7 @@ By default, dashboards:
 
 You can select a larger or smaller time window or view past data instead of real-time data with the time bar controls.
 
-{% include note.html content="When you change the time window, the refresh rate changes as well. For example, if you select a 10-minute time window, the charts in the dashboard refresh every second." %}
+{% include note.html content="When you change the time window, the [chart resolution](ui_charts.html#chart-resolution) and the refresh rate change as well. For example, if you select a 10-minute time window, the charts in the dashboard refresh every second." %}
 
 **To change the dashboard time window:**
 
@@ -178,6 +179,8 @@ You can focus on a particular source or series in the dashboard view or the sing
 
 You can fine-tune the time window for an individual chart, propagate the time window from one to all charts, and reset a customized time window to the dashboard default.
 
+When you fine-tune the time window, the Wavefront UI dynamically recalculates and updates the chart bucket size and the aggregated values based on the [summarization option](ui_charts_faq.html#what-does-the-summarization-option-do). 
+
 <table style="width: 100%;">
 <tbody>
 <thead>
@@ -205,8 +208,7 @@ You can move the time window into the future. However, unless you are using one 
 </table>
 
 
-Here's a video that illustrates chart time windows. The video uses the v1 UI, but most of the information is still accurate:
-
+Here's a <a href="https://bcove.video/3sweZ7W" target="_blank">video<img src="/images/video_camera.png" alt="video camera icon"/></a> that illustrates chart time windows. The video uses the v1 UI, but most of the information is still accurate:
 <p>
 <iframe src="https://bcove.video/3sweZ7W" width="700" height="400" allowfullscreen="true" alt="Video that illustrate how to set time windows for one chart, sync time for all charts on a dashboard, and reset time windows"></iframe>
 </p>

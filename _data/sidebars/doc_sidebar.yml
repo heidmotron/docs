@@ -231,8 +231,12 @@ entries:
           url: /proxies_manual_install.html
           output: web
 
-        - title: Run a Proxy in a Container
+        - title: Run a Proxy in a Docker Container
           url: /proxies_container.html
+          output: web
+
+        - title: Proxy in a Kubernetes Container
+          url: /proxies_kube_container.html
           output: web
 
         - title: Proxy Configuration
@@ -483,6 +487,10 @@ entries:
           - title: AWS Integration Overview
             url: /integrations_aws_overview.html
             output: web
+            
+          - title: AWS Integration API Setup
+            url: /integrations_aws_overview_API.html
+            output: web
 
           - title: AWS Metrics Integration
             url: /integrations_aws_metrics.html
@@ -500,7 +508,7 @@ entries:
             url: /integrations_aws_key_age.html
             output: web
 
-          - title: VMware PKS Integration
+          - title: VMware TKGi Integration
             url: /integrations_tkgi.html
             output: web
 
@@ -508,14 +516,17 @@ entries:
             url: /integrations_log_data.html
             output: web
 
-          - title: IBM Cloud Integration (Third-Party Content)
-            url: /integrations_ibmcloud_thirdparty.html
+          - title: vRealize Operations Cloud Integration
+            url: /integrations_vrops.html
             output: web
 
           - title: Set Up Wavefront as PromQL Data Source in Grafana
             url: /integrations_grafana.html
             output: web
 
+          - title: Send Wavefront Data to CloudHealth
+            url: /integrations_cloudhealth.html
+            output: web
 
       - title: collectd Integrations
         output: web
@@ -563,6 +574,10 @@ entries:
 
       - title: Set Up Kubernetes
         url: /kubernetes.html
+        output: web
+
+      - title: Proxy in a Kubernetes Container
+        url: /proxies_kube_container.html
         output: web
 
       - title: Monitor Tanzu Mission Control
