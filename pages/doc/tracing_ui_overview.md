@@ -9,6 +9,8 @@ summary: Get an overview of the services and applications that send data to Wave
 
 It is important to get an overview of the services and applications that send data to Wavefront, understand the health of each service, and troubleshoot when your applications or services run into issues. You can get an overview and see the overall health of each application using the application map, table view, and grid view.
 
+{%include tip.html content="In addition to features discussed here, you can use [Saved Searches and bookmarks](trace_data_query.html#create-and-use-saved-searches-with-bookmarks) in the Application Map. "%}
+
 <a name="app_map"></a>
 
 ## Application Map Features
@@ -465,4 +467,4 @@ Create an alert from the application status page:
 <!---
   ![Create an alert from the table view page.](images/tracing_creating_an_alert_app_map.png)--->
 
-Once the alert is created, click **Alerting** and search for the alert you created .
+Once the alert is created, click **Alerting** and search for the alert you created.

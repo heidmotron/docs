@@ -9,6 +9,8 @@ summary: Explore traces and spans from the Wavefront UI
 
 In the Traces Browser, you can explore the context and the details of your application's traces.
 
+{%include tip.html content="In addition to features discussed here, you can use [Saved Searches and bookmarks](trace_data_query.html#create-and-use-saved-searches-with-bookmarks) in the Traces Browser. "  %}
+
 ## Video
 
 This <a href="https://bcove.video/3vaNJM7" target="_blank">video<img src="/images/video_camera.png" alt="video camera icon"/></a> highlights the Traces Browser features and settings:
@@ -20,9 +22,9 @@ This <a href="https://bcove.video/3vaNJM7" target="_blank">video<img src="/image
 See the Traces Browser:
 
 * Option 1:
-  1. In your web browser, go to your Wavefront cluster and log in. 
+  1. In your web browser, go to your Wavefront cluster and log in.
   1. From the taskbar, click **Applications** > **Traces**.
-  
+
 * Option 2:
   1. In your web browser, go to your Wavefront cluster and log in.
   1. Drill down to the Traces Browser from the Service Dashboard, application map, table view, or grid view.
@@ -49,7 +51,7 @@ From the Traces Browser, you can:
   You can toggle the panel size for the traces list, service map, or trace details.
 * Export traces by clicking <img src="images/tracing_import_traces.png"
 style="vertical-align:text-bottom;width:25px" alt="import tracing icon"/>, save the JSON file, and view them later using [Offline Traces](#view-traces-offline).
-* Easily analyze your traces hierarchy and RED metrics by clicking the expand or restore icon. 
+* Easily analyze your traces hierarchy and RED metrics by clicking the expand or restore icon.
   * Click the expand icon to expand the RED metrics and view them next to the trace list, and click the same icon again to restore to the default view.
     ![partial expand red metrics](images/tracing_ui_partial_expand_red_metrics.png)
   * Click the expand icon to expand the trace hierarchy and view them next to the trace list, and click the same icon again to restore to the default view.
@@ -87,7 +89,7 @@ In the service map panel, you can:
 * Click on a service to display the RED metrics that reflect the health of the service:
   - Request count, error count, and trace duration at the 95th percentile, over all traces (root spans) that originate in the service.
   - Line charts that indicate the general contour of the RED metrics.
-  - [Fine-tune the time window](ui_examine_data.html#fine-tune-the-time-window) of the RED metrics charts, and see [events](events.html). 
+  - [Fine-tune the time window](ui_examine_data.html#fine-tune-the-time-window) of the RED metrics charts, and see [events](events.html).
 * Navigate to the selected service's dashboard for more service details.
 * Scroll the service map to zoom in or out, and re-center the service map.
 * Look for nodes that are grayed out. These represent services that contribute spans to at least one trace in the list, but not to the trace that is currently selected.
