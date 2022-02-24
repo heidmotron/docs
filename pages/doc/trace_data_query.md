@@ -20,7 +20,7 @@ Wavefront maintains separate lists for Traces browser and App Map.
 * Each user can save searches. All users can select those searches from the search list of that page (**Saved Searches**).
 * To access only the searches you saved, you can use **My Saved Searches**.
 
-{%include tip.html content="Each type of page (Traces browser, App Map, etc) has its own list of saved searches."  %}
+{%include tip.html content="Each type of page (Traces browser, App Map view on Application Status, etc) has its own list of saved searches."  %}
 
 * After you've defined a search, click **Search** on the right.
 * Click the **Save** (bookmark) icon to save the current search.
