@@ -17,8 +17,8 @@ Bookmark Lists supports easy access to just the information you need. For exampl
 
 Wavefront maintains separate lists for Traces browser and App Map.
 * Each user can use **My Recent Searches**. The last 10 searches are shown.
-* Each user can save searches. All users can select those searches from the search list of that page (**Saved Searches**).
-* To access only the searches you saved, you can use **My Saved Searches**.
+* Each user can save searches. All users can select those searches from the **All Saved Searches** list.
+* To only access the searches you saved, use **My Saved Searches**.
 
 {%include tip.html content="Each type of page (Traces browser, App Map view on Application Status, etc) has its own list of saved searches."  %}
 
