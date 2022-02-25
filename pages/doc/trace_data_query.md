@@ -12,17 +12,17 @@ After your application sends [trace data](tracing_basics.html#wavefront-trace-da
 ## Create and Use Saved Searches with Bookmarks
 
 Bookmark Lists supports easy access to just the information you need. For example:
-* The owner of an application or service might want to see only that application or service in the  Application map or Traces browser.
-* You might want to search only for data in the Prod environment or otherwise limit what you see.
+* The owner of an application or service might want to see only that application or service in the Application Status or Traces Browser.
+* You might want to search only for data in the production environment or otherwise limit what you see.
 
-Wavefront maintains separate lists for Traces browser and App Map.
+Wavefront maintains separate lists for Traces Browser and Application Status.
 * Each user can use **My Recent Searches**. The last 10 searches are shown.
 * Each user can save searches. All users can select those searches from the **All Saved Searches** list.
 * To only access the searches you saved, use **My Saved Searches**.
 
-{%include tip.html content="Each type of page (Traces browser, App Map view on Application Status, etc) has its own list of saved searches."  %}
+{%include tip.html content="Each type of page (Traces browser, Application Status, etc.) has its own list of saved searches."  %}
 
-* After you've defined a search, click **Search** on the right.
+* After you define a search, click **Search** on the right.
 * Click the **Save** (bookmark) icon to save the current search.
 * Click **Lists** to see available Searches (bookmarks) in alphabetical order:
   - **My Recent Searches**: Last 10 searches for the current user.
@@ -32,10 +32,6 @@ Wavefront maintains separate lists for Traces browser and App Map.
 The following annotated screenshot collage illustrates what you can do.
 
 ![collage showing annotated search bar and Bookmarks/searches pop-up](images/tracing_saved_searches.png)
-
-### Example
-
-TBD
 
 ## View Tracing Critical Path Data in Charts
 

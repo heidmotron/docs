@@ -8,7 +8,7 @@ summary: Learn how to search for objects in the Wavefront UI.
 ---
 To help you find exactly what you need, Wavefront supports tags and a variety of search features.
 
-{%include tip.html content="In addition to features discussed here, Wavefront supports [Saved Searches and bookmarks for applications](trace_data_query.html#create-and-use-saved-searches-with-bookmarks) in the Traces Browser and Application Map. "  %}
+{%include tip.html content="In addition to features discussed here, Wavefront supports [Saved Searches and bookmarks for applications](trace_data_query.html#create-and-use-saved-searches-with-bookmarks) in the Traces Browser and Application Status. "  %}
 
 ## Video
 
