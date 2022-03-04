@@ -24,7 +24,7 @@ Wavefront maintains separate lists for Traces Browser and Application Status.
 
 * After you define a search, click **Search** on the right.
 * Click the **Save** (bookmark) icon to save the current search.
-* Click **Lists** to see available Searches (bookmarks) in alphabetical order:
+* Click **Lists** to see available Searches (bookmarks):
   - **My Recent Searches**: Last 10 searches for the current user.
   - **My Saved Searches**: Saved searches for the current user.
   - **All Saved Searches**: Saved searches for all users.
