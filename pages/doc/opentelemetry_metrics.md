@@ -8,7 +8,7 @@ OpenTracing and OpenCensus merged to form OpenTelemetry. OpenTelemetry provides 
 
 ## Send Metrics Data
 
-Metrics data includes time series, counters, and histograms. You use the OpenTelemetry Collector and the Wavefront proxy. When the data is in Tanzu Observability, you can use charts and dashboards to visualize the data and create alerts.
+If your application uses OpenTelemetry, you can configure the application to send native OpenTelemetry metrics data to Tanzu Observability using the OpenTelemetry Collector and the Wavefront proxy. Metrics data includes time series, counters, and histograms. When the data is in Tanzu Observability, you can use charts and dashboards to visualize the data and create alerts.
 
 Here's how it works:
 ![tThe diagram shows how the data flows from an application to OpenTelemetry collector, which has the OpenTelemetry exporter, to the wavefront proxy, which has the OpenTelemetry receiver, and finally to Tanzu Observability.](images/opentelemetry_collector_metrics.png)
@@ -22,41 +22,14 @@ Follow these steps to send data to Tanzu Observability:
           If you have already installed the Wavefront proxy, make sure it is version 10.14 or higher. 
         </li>
         <li>
-          Ensure that port 2878 is open to send spans and metrics to Tanzu Observability. For example, on Linux, Mac, and Windows, open the <a href="proxies_configuring.html#proxy-file-paths"><code>wavefront.conf</code></a> file and confirm that <code>pushListenerPorts</code> is set to 2878, and that this configuration is uncommented.
+          Ensure that port 2878 is open to send metrics to Tanzu Observability. For example, on Linux, Mac, and Windows, open the <a href="proxies_configuring.html#proxy-file-paths"><code>wavefront.conf</code></a> file and confirm that <code>pushListenerPorts</code> is set to 2878, and that this configuration is uncommented.
         </li>
       </ul>
     {{site.data.alerts.end}}
 
 1. Configure your application to send the metrics data to the OpenTelemetry Collector. 
-1. Export the metrics data from the OpenTelemetry Collector using the Tanzu Observability (Wavefront) metrics exporter. See [Install the OpenTelemetry Collector](https://github.com/wavefrontHQ/opentelemetry-examples#install-the-opentelemetry-collector) to get the up-to-date YAML file.
+1. Export the metrics data from the OpenTelemetry Collector using the Tanzu Observability (Wavefront) metrics exporter. See [Install the OpenTelemetry Collector](https://github.com/wavefrontHQ/opentelemetry-examples#install-the-opentelemetry-collector) to get the up-to-date YAML file configurations.
     {% include note.html content="The Tanzu Observability metrics exporter in the OpenTelemetry collector converts the OpenTelemetry metrics to the Tanzu Observability metrics format. See [OpenTelemetry Metrics in Tanzu Observability](#metrics-conversion) to learn more about the different metrics types you can see in the dashboards and charts." %}
-    For example, make sure you have all the metrics configurations in your YAML file:
-    
-    ```
-    receivers:
-      otlp:
-        protocols:
-            grpc:
-                endpoint: "<enter your OpenTelemetry collector IP address>:4317"
-
-    exporters:
-      tanzuobservability:
-        metrics:
-          endpoint: "http://<enter your Wavefront proxy IP address>:2878"
-    # Proxy hostname and customTracing ListenerPort
-
-    processors:
-      batch:
-        timeout: 10s
-
-    service:
-      pipelines:
-        metrics:
-          receivers: [otlp]
-          exporters: [tanzuobservability]
-          processors: [batch]
-
-    ```
 1. Explore the metrics data you sent with charts and dashboards.
     {% include note.html content="Try out the [Dashboards and Charts tutorial](tutorial_dashboards.html) or watch the video on that page to get started." %}
     Example:
@@ -143,7 +116,7 @@ The OpenTelemetry metrics your applications send are converted to the [Wavefront
       </td>
       <td>
         Gauge metrics
-        <br/>Each quantile in the summary is sent to Wavefront as a series of gauge metrics.
+        <br/>Each quantile in the summary is sent to Tanzu Observability as a series of gauge metrics.
       </td>
     </tr>
     
