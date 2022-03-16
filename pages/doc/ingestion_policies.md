@@ -3,7 +3,7 @@ title: Examine the Wavefront Usage with Ingestion Policies
 tags: [administration, dashboards]
 sidebar: doc_sidebar
 permalink: ingestion_policies.html
-summary: Examine who is using what by creating ingestion policies and setting limits with alerts.
+summary: Monitor usage with ingestion policies and usage dashboards and alerts.
 ---
 
 As a Wavefront Super Admin, you're interested in usage patterns for the whole company, but also for different teams in the company. You can create ingestion policies and assign accounts or groups to each policy to see which teams use which part of the total ingestion.
@@ -16,7 +16,7 @@ You can examine the performance of your Wavefront instance using [wftop, Wavefro
 
 Ingestion policies allow you to group user and service accounts or groups, so that you can examine their usage for your cluster. For example, you can create a policy for all accounts that joined in the last 6 months, or create a policy for a whole team, for example the Finance team, and monitor whether they show unusually high usage because they're not yet experienced. In such a case, you can provide additional training. Also, you can set a Points per Second (PPS) limit to an ingestion policy with an associated alert, so that you can receive notifications and track how much of the PPS is used and whether the users or the team will need more PPS in the future.
 
-* The policy scope can be either accounts or groups. Once you set the scope to accounts or groups, you cannot edit it, you can only add and remove accounts or groups from the selected scope.
+* The policy scope can be either accounts or groups. Once you set the scope to accounts or groups, you cannot change it.
 * Each account or group can belong to more than one policy at a time.
 * You can assign many user and service accounts to the same ingestion policy.
 * You can assign many groups to the same ingestion policy.
@@ -31,60 +31,67 @@ Ingestion policies allow you to group user and service accounts or groups, so th
 ### Step 0: Start the Ingestion Policy Creation
 
 1. Log in to your Wavefront instance as a Super Admin user.
-2. From the gear icon <i class="fa fa-cog"/> on the taskbar, select **Usage and Subscriptions**.
+2. From the gear icon <i class="fa fa-cog"/> on the taskbar, select **Usage Portal and Subscriptions**.
 3. Click the **Ingestion Policies** tab, and click **New Ingestion Policy**.
 
-### Step 1: Specify the Scope
+### Step 1: Specify the Scope and PPS Limit
 
-In the **Data** panel, assign the user and service accounts or groups and, optionally, specify a PPS limit, and click **Next**.
+In the **Data** panel, specify the user and service accounts or groups and, optionally, a PPS limit and click **Next**.
 1. Choose the **Scope** of the policy, either **Accounts** or **Groups**, and enter the user and service accounts or the groups that you want to assign to the policy.
   
-    After you create the policy, you cannot edit the scope. You can only change the assigned accounts or groups to the policy.
+    After you create the policy, you cannot change the scope. You can change only the assigned accounts or groups depending on the scope.
 2. Choose whether you want to set a PPS limit. If you select **set a PPS limit**, you must enter the points per second limit number in the **PPS per billing period** text box.
    
     The limit becomes visible in the ingestion policy dashboard charts. If you set a PPS limit, you must create the ingestion policy alert in the next steps.
    
-### Step 2: Create the Ingestion Policy Alert (If you set a PPS limit)
-The steps for creating an ingestion policy alert are similar to the steps for [creating a general alert](alerts_manage.html#create-alert-tutorial).
+### Step 2: Configure the Ingestion Policy Alert
 
-1. In the **Conditions** panel, configure thresholds and severities.
-   1. Select the alert condition operator. You can alert when the usage is greater than or less than a specified threshold.
-   2. Specify a threshold percentage of the PPS limit for at least one severity and click **Next**.
+If you set a PPS limit for the ingestion policy, Tanzu Observability creates an ingestion policy alert which queries the percentage of the PPS limit used by the accounts in the policy. You specify [thresholds and severities](https://docs.wavefront.com/alerts_manage.html#step-2-specify-thresholds-and-severities), [recipients](https://docs.wavefront.com/alerts_manage.html#step-3-specify-recipients), and a [name](https://docs.wavefront.com/alerts_manage.html#step-5-name-and-activate-the-alert) for the ingestion policy alert.
+
+{% include note.html content="If you chose not to set a PPS limit, this step is skipped."%}
+
+1. In the **Conditions** panel, configure the thresholds and severities.
+   1. Select the comparison operator for the alert condition. You can alert when the usage is greater than or less than a specified threshold percentage of the policy PPS limit.
+   2. For at least one severity, specify a threshold percentage of the policy PPS limit and click **Next**.
    
        The threshold percentage becomes visible in the ingestion policy alert chart.
-2. In the **Recipients** panel, configure the notifications recipients for each severity that you set and click **Next**.
-3. In the **Activate** panel, enter a name for the alert and, optionally, alert tags and click **Next**.
-       
+2. In the **Recipients** panel, specify who will receive the alert notifications and click **Next**.
+3. In the **Activate** panel, enter a name for the alert and, optionally, tags and click **Next**.
+
+After you create the ingestion policy, the associated alert is available in the Alerts Browser.
+     
 ### Step 3: Name and Activate the Ingestion Policy
 In the **Create** panel, enter a name for the policy and, optionally, a description and click **Create**.
 
-If a user starts ingesting data into Wavefront through a Wavefront Proxy, you can see the ingestion policies to which a proxy belongs from the [Proxies browser](#see-the-ingestion-policies-to-which-a-proxy-belongs) page.
+If a user assigned to an ingestion policy is ingesting data through a Wavefront proxy, the proxy is also associated with the ingestion policy. You can [see the ingestion policies to which a proxy belongs](#see-the-ingestion-policies-to-which-a-proxy-belongs).
 
 ## Edit an Ingestion Policy
 
-After you create an ingestion policy, if you need, for example, to increase the PPS limit, you can edit the policy. 
+After you create an ingestion policy, if you need, for example, to increase the PPS limit or add accounts, you can edit the policy. 
 
-{% include note.html content="You cannot edit the scope of the policy. You can only add and remove accounts or groups depending on the scope."%}
+{% include note.html content="You cannot change the policy scope from accounts to groups or the reverse."%}
+
+{% include note.html content="Removing the PPS limit dissociates the alert from the ingestion policy."%}
 
 1. Log in to your Wavefront instance as a Super Admin user.
 2. From the gear icon <i class="fa fa-cog"/> on the taskbar, select **Usage and Subscriptions**.
 3. On the **Ingestion Policies** tab, click the ellipsis icon next to the policy that you want to edit and click **Edit**.
-4. Apply the necessary changes, and in the **Create** panel, click **Save**.
+4. In each panel, apply the necessary changes and click **Next**, and in the last **Create** panel, click **Save**.
 
-### Delete Ingestion Policies
+## Delete Ingestion Policies
 
-{% include note.html content="Deleting an ingestion policy with a PPS limit, also deletes its associated alert if exists."%}
+{% include note.html content="Deleting an ingestion policy with a PPS limit, deletes also its associated alert."%}
 
 1. Log in to your Wavefront instance as a Super Admin user.
 2. From the gear icon <i class="fa fa-cog"/> on the taskbar, select **Usage and Subscriptions**.
 3. On the **Ingestion Policies** tab, click the ellipsis icon next to the policy that you want to delete, click **Delete** and confirm.
 
-### See the Ingestion Policies to Which a Proxy Belongs
+## See the Ingestion Policies to Which a Proxy Belongs
 
 1. Log in to your Wavefront instance as a Super Admin user.
 2. Click **Browse > Proxies**.
    
-   For each proxy the **Ingestion Policies** column shows a list of policies. 
+   For each proxy, the **Ingestion Policies** column shows a list of policies. 
 
    If the proxy belongs to many policies, hover over the three horizontal dots and you'll see the rest of the ingestion policies in a tooltip.
 
