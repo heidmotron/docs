@@ -27,7 +27,7 @@ This page lists new and updated features for the Tanzu Observability by Wavefron
 
     Most users are already using the v2 GUI. However, if your dashboards and charts are migrated, see [What's New in v2 Dashboards & Charts](ui_v2_faq.html) for info.
 
-# 2022-11.x Release Notes
+## 2022-11.x Release Notes
 
   <table>
   <tbody>
@@ -43,9 +43,9 @@ This page lists new and updated features for the Tanzu Observability by Wavefron
   <td width="50%"><img src="/images/create_alert_browser.png" alt="The new alerting menu on the toolbar."></td>
   </tr>
   <tr>
-  <td width="50%"><strong>Improved user experience for slow loading queries</strong>:<br/><br/>
-  You can stop and easily reload slow loading charts on dashboards. When you open a dashboard, and you see that a chart is slowly loading, instead of refreshing the whole browser page, you can click the <strong>Stop</strong> button on the chart to stop fetching the data. To reload the query request, simply click <strong>Reload</strong>. <br/>
-  In addition, you can see a progress bar at the bottom of the chart.
+  <td width="50%"><strong>Improved user experience for slow loading or failed queries</strong>:<br/><br/>
+  If your charts contain slow loading queries, the charts on the dashboard will load slowly as well. When you open a dashboard, and you see that a chart is slowly loading, instead of refreshing the whole browser page, you can click the <strong>Stop</strong> button on the chart to stop fetching the data. To reload the query request, simply click <strong>Reload</strong>. <p>If a query on a chart fails to load data,  click the <strong>Reload</strong> button to rerun the query.</p><p>
+  In addition, you can see a progress bar at the bottom of the chart.</p>
   </td>
   <td width="50%"><img src="/images/stop-reload-chart.png" alt="A chart with reload button and a progress bar at the bottom."></td>
   </tr>
