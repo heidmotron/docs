@@ -64,6 +64,8 @@ If you set a PPS limit for the ingestion policy, Tanzu Observability creates an 
    2. For at least one severity, specify a threshold percentage of the PPS limit and click **Next**.
    
        The threshold percentage becomes visible in the ingestion policy alert chart.
+       
+       You can skip the other settings.
 2. In the **Recipients** panel, specify who will receive the alert notifications and click **Next**.
 3. In the **Activate** panel, enter a name for the alert and, optionally, tags and click **Next**.
 
