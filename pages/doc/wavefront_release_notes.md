@@ -41,7 +41,7 @@ This page lists new and updated features for the Tanzu Observability by Wavefron
     <strong>Read More:</strong>
     <ul>
         <li><a href="https://github.com/wavefrontHQ/wavefront-proxy/releases">Wavefront Proxy Release Notes on GitHub</a></li>
-        <li><a href="opentelemetry_tracing.html#send-data-using-the-wavefront-proxy---recommended">Send Data Directly Using the Wavefront Proxy</a></li>
+        <li><a href="opentelemetry_tracing.html#send-data-using-the-wavefront-proxy---recommended">Send OpenTelemetry Trace Data Directly Using the Wavefront Proxy</a></li>
         <li><a href="opentelemetry_logs.html">Enable Proxy Debug Logs for OpenTelemetry Data</a></li>
       </ul>
     </td>
@@ -53,7 +53,7 @@ This page lists new and updated features for the Tanzu Observability by Wavefron
     </td>
     <td width="50%">
       <strong>Read More:</strong>
-    
+
       <ul>
         <li><a href="optimize_data_shape.html">Optimizing the Data Shape to Improve Performance</a></li>
         <li><a href="missing_data_troubleshooting.html">Troubleshooting Missing Data</a></li>
@@ -100,7 +100,6 @@ This page lists new and updated features for the Tanzu Observability by Wavefron
   </tr>
     </tbody>
   </table>
-
 
 ## 2022-09.x Release Notes
 

@@ -12,6 +12,9 @@ You can use the Amazon Web Services integration for initial setup, but additiona
 
 {% include note.html content="You must have the [**Proxy Management** permission](permissions_overview.html) to set up an AWS integration. If you do not have permission, the UI menu selections, buttons, and links you use to perform the tasks are not visible." %}
 
+
+{% include note.html content="Depending on the Tanzu Observability version that you use, there might be slight differences between the UI and the documented procedures for setting up and managing your AWS integration." %}
+
 ## Basics
 
 The AWS integration ingests data from many Amazon and AWS products including:
