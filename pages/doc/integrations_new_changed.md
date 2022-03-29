@@ -8,6 +8,10 @@ summary: New and changed integrations.
 ---
 Tanzu Observability by Wavefront continuously adds new integrations to the existing set, and improves available integrations. We update our [**complete list of all integrations**](https://docs.wavefront.com/label_integrations%20list.html) each time we add new integrations.
 
+## Announcements
+
+* Depending on the Tanzu Observability version that you use, there might be slight differences between the UI and the documented procedures for setting up and managing your AWS integration.
+
 ## March 2022
 
 We added the following integrations in March 2022:

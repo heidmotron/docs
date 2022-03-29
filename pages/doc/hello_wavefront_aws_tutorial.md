@@ -24,6 +24,8 @@ In this tutorial, you use the Amazon Web Services (AWS) integration to:
 * Send data of the applications and services that run on your AWS account to Tanzu Observability by Wavefront.
 * Visualize the data and identify problem areas once the data is in the Tanzu Observability by Wavefront GUI.
 
+{% include note.html content="Depending on the Tanzu Observability version that you use, there might be slight differences between the UI and the documented procedures for setting up and managing your AWS integration." %}
+
 It's an easy setup. You don't have to install anything or make changes to your application code.
 
 We support other cloud integrations, such as Google Cloud Platform (GCP), Microsoft Azure, and many other integrations. See [List of Wavefront Integrations](label_integrations%20list.html).
