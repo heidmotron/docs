@@ -2,16 +2,16 @@
 title: OpenTelemetry Metrics Data
 tags: [tracing]
 permalink: opentelemetry_metrics.html
-summary: Learn how to send trace data from your application that uses OpenTelemetry to Tanzu Observability.
+summary: Learn how to send metrics data from your application that uses OpenTelemetry to Tanzu Observability.
 ---
 OpenTracing and OpenCensus merged to form OpenTelemetry. OpenTelemetry provides a single set of APIs, libraries, agents, and collector services to capture distributed traces, metrics, and logs from your application. If your application uses OpenTelemetry, you can configure the application to send metrics to Tanzu Observability by Wavefront.
 
 ## Sending Metrics Data to Wavefront
 
-If your application uses OpenTelemetry, you can configure the application to send metrics data to Wavefront. Metrics data includes time series, counters, and histograms. You use the Wavefront Prometheus storage adapter and the Wavefront proxy. Once the data is in Wavefront, you can use charts and dashboards to visualize the data and create alerts.
+If your application uses an OpenTelemetry SDK, you can configure the application to send metrics data to Tanzu Observability using the OpenTelemetry Collector and the Wavefront proxy. Metrics data includes time series, counters, and histograms. When the data is in Tanzu Observability, you can use charts and dashboards to visualize the data and create alerts.
 
 Here's how it works:
-{% include image.md src="images/tracing_opentelemetry_metrics_data.png" width="100" %}
+![The diagram shows how the data flows from an application to OpenTelemetry collector, which has the OpenTelemetry exporter, to the wavefront proxy, which has the OpenTelemetry receiver, and finally to Tanzu Observability.](images/opentelemetry_collector_metrics.png)
 
 Follow these steps:
 
@@ -19,7 +19,7 @@ Follow these steps:
     {{site.data.alerts.note}}
       <ul>
         <li>
-          If you have already installed the Wavefront proxy, make sure it is version 10.14 or higher. 
+          If you have already installed the Wavefront proxy, make sure it is version 10.14 or later. 
         </li>
         <li>
           Ensure that port 2878 is open to send metrics to Tanzu Observability. For example, on Linux, Mac, and Windows, open the <a href="proxies_configuring.html#proxy-file-paths"><code>wavefront.conf</code></a> file and confirm that <code>pushListenerPorts</code> is set to 2878, and that this configuration is uncommented.
