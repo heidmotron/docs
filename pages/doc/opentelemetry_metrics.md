@@ -6,14 +6,14 @@ summary: Learn how to send trace data from your application that uses OpenTeleme
 ---
 OpenTracing and OpenCensus merged to form OpenTelemetry. OpenTelemetry provides a single set of APIs, libraries, agents, and collector services to capture distributed traces, metrics, and logs from your application. If your application uses OpenTelemetry, you can configure the application to send metrics to Tanzu Observability by Wavefront.
 
-## Send Metrics Data
+## Sending Metrics Data to Wavefront
 
-If your application uses OpenTelemetry, you can configure the application to send native OpenTelemetry metrics data to Tanzu Observability using the OpenTelemetry Collector and the Wavefront proxy. Metrics data includes time series, counters, and histograms. When the data is in Tanzu Observability, you can use charts and dashboards to visualize the data and create alerts.
+If your application uses OpenTelemetry, you can configure the application to send metrics data to Wavefront. Metrics data includes time series, counters, and histograms. You use the Wavefront Prometheus storage adapter and the Wavefront proxy. Once the data is in Wavefront, you can use charts and dashboards to visualize the data and create alerts.
 
 Here's how it works:
-![tThe diagram shows how the data flows from an application to OpenTelemetry collector, which has the OpenTelemetry exporter, to the wavefront proxy, which has the OpenTelemetry receiver, and finally to Tanzu Observability.](images/opentelemetry_collector_metrics.png)
+{% include image.md src="images/tracing_opentelemetry_metrics_data.png" width="100" %}
 
-Follow these steps to send data to Tanzu Observability:
+Follow these steps:
 
 1. [Install the Wavefront Proxy](proxies_installing.html).
     {{site.data.alerts.note}}
@@ -126,10 +126,7 @@ The OpenTelemetry metrics your applications send are converted to the [Wavefront
 {% include tip.html content="For more information on the Tanzu Observability metrics, see [Metric Types](metric_types.html)." %}
 
 ## Next Steps
-
-* [Try out the Tutorials](opentelemetry_java_tutorial.html) and see how you can send your data to Tanzu Observability!
-* Next, log in to your Tanzu Observability instance and examine your data in dashboards and charts:
-  * [Examine the sample data on the predefined charts and dashboards](tutorial_dashboards.html).
-  * Create [dashboards](ui_dashboards.htm) and [charts](ui_charts.html) for the data you sent to Tanzu Observability. 
-    <br/>You need to have the required permissions to do these tasks.
-  
+Next, log in to your Tanzu Observability instance and examine your data in dashboards and charts:
+* [Examine the sample data on the predefined charts and dashboards](tutorial_dashboards.html).
+* Create [dashboards](ui_dashboards.html) and [charts](ui_charts.html) for the data you sent to Tanzu Observability. 
+  <br/>You need to have the required permissions to do these tasks.

@@ -6,14 +6,14 @@ sidebar: doc_sidebar
 permalink: terms_of_service.html
 summary: Data Retention and Terms of Service
 ---
-The terms of service and data retention differs depending on the contract your company has with VMware. This page gives a summary and links to some relevant information.
+The terms of service and data retention for Tanzu Observability by Wavefront differ depending on the contract your company has with VMware. This page gives a summary and links to some relevant information.
 
 {% include tip.html content="Details vary depending on when you became a customer and on your Service Agreement with VMware." %}
 
 
 ## Data Retention
 
-Production Wavefront clusters retain different data for different amounts of time. While this is subject to change, here are the default settings:
+A production Wavefront instance retains different types data for different amounts of time. While this is subject to change, here are the default settings:
 
 <table>
 <tbody>
@@ -25,7 +25,7 @@ Production Wavefront clusters retain different data for different amounts of tim
 <tr><td><strong>histograms</strong></td>
 <td>6 months of data retention</td></tr>
 <tr><td><strong>spans</strong></td>
-<td>7 days retention. With spans, we use <a href="trace_data_sampling.html#wavefront-intelligent-sampling">Intelligent Sampling</a>. Use trace sampling policies explicitly exclude certain spans.  </td></tr>
+<td>7 days retention. With spans, we use <a href="trace_data_sampling.html#intelligent-sampling">Intelligent Sampling</a>. Use trace sampling policies explicitly exclude certain spans.  </td></tr>
 </tbody>
 </table>
 
